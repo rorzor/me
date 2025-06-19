@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rory O'Connor | Drone & ML Engineer</title>
+  <!-- Tailwind CSS CDN for rapid, responsive styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Favicon placeholder (replace /favicon.ico with your own) -->
+  <link rel="icon" href="/favicon.ico" />
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed tracking-wide">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <!-- Brand -->
+        <a href="#" class="flex items-center py-5 px-2 text-gray-800 font-bold text-lg hover:text-blue-600 transition">Rory&nbsp;O'Connor</a>
+
+        <!-- Nav links -->
+        <div class="flex items-center space-x-1">
+          <button id="aboutToggle" class="py-5 px-3 text-gray-600 hover:text-blue-600 font-medium focus:outline-none">About&nbsp;Me</button>
+          <a href="#projects" class="py-5 px-3 text-gray-600 hover:text-blue-600 font-medium">Projects</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Dropdown -->
+  <section id="aboutDropdown" class="hidden bg-white shadow-inner">
+    <div class="max-w-4xl mx-auto p-6">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-600">About Me</h2>
+      <p class="mb-4">
+        I have been immersed in <strong>drone systems and data</strong> since&nbsp;2014, capturing high‑resolution imagery and engineering robust workflows for industrial inspection. Over the years, my curiosity for what happens <em>after</em> the data lands pushed me further into software engineering, where I discovered a passion for <strong>Python‑powered machine learning</strong>. Today I architect scalable ML solutions that turn pixels and point clouds into actionable insights—while still indulging my love of flight.
+      </p>
+      <p>
+        When I'm not wrangling code or datasets, you'll catch me experimenting with game design, learning about new technologies, and trying to better understand what makes us who we are.
+      </p>
+    </div>
+  </section>
+
+  <!-- Hero / Banner -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <div class="max-w-4xl mx-auto py-28 px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+        Turning Aerial Data <br class="hidden md:block" />into Insight
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+        Drone system engineer turned product director with a flair for Machine Learning. Building tools that help industries see the bigger (and sharper) picture.
+      </p>
+      <a href="#projects" class="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+        See&nbsp;My&nbsp;Work
+      </a>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Featured Projects</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- ChessPSR Card -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-8">
+          <h3 class="text-2xl font-semibold mb-2">ChessPSR</h3>
+          <p class="mb-4 text-gray-600">
+            Taking the board from chess and the uncertainty of paper-scissors-rock, this mind bending game of will test your ability to decieve and persuade with layers of subtle strategic bluffing.
+          </p>
+          <!-- Update href once the game is deployed -->
+          <a href="https://rorzor.github.io/ChessPSR" target="_blank" class="text-blue-600 font-medium hover:underline flex items-center">
+            Play&nbsp;the&nbsp;game&nbsp;→
+          </a>
+        </div>
+
+        <!-- Template for Additional Projects -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-8 flex flex-col justify-between">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2">QLearnPlayGround</h3>
+            <p class="mb-4 text-gray-600">
+              A lightweight interface to test and visualise deep q-learning.
+            </p>
+          </div>
+          <span class="text-sm text-gray-400">(Private demo)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-6">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p>© <span id="year"></span> Rory O'Connor. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Toggle the visibility of the About Me dropdown
+    document.getElementById('aboutToggle').addEventListener('click', () => {
+      document.getElementById('aboutDropdown').classList.toggle('hidden');
+    });
+
+    // Update footer year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
